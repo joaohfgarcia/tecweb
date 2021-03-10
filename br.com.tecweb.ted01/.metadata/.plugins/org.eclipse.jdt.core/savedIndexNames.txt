@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+D:\D_Arquivos\UNIESP\P3\tecnologia_web\br.com.tecweb.aula1\.metadata\.plugins\org.eclipse.jdt.core
+996700402.index
