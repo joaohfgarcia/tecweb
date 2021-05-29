@@ -9,11 +9,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.com.bank.model.User;
+import br.com.bank.service.UserServiceImpl;
+
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-  
+	private UserServiceImpl service;
 	
+	public LoginServlet () {
+		this.service = new UserServiceImpl ();
+	}
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		RequestDispatcher rd = request.getRequestDispatcher("admin/login.jsp");
@@ -25,19 +31,22 @@ public class LoginServlet extends HttpServlet {
 		
 		String email = request.getParameter("email");
 		String pass = request.getParameter("password");
+		User user = service.buscar(email, pass);
 		
-		if(email.equals("admin@gmail.com") && pass.equals("123")) {
+		if(user != null ) {
 			
-			RequestDispatcher rd = request.getRequestDispatcher("/admin/dashboard/index.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("admin/dashboard/index.jsp");
 			request.setAttribute("user",email);
 			rd.forward(request, response);
 			
-		}else {
+		}else  {
+			 
 			
-			RequestDispatcher rd = request.getRequestDispatcher("error.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("admin/login.jsp");
 			request.setAttribute("error", "Erro, login ou senha inválidos");
 			rd.forward(request, response);
 		}
+		
 		
 	}
 
