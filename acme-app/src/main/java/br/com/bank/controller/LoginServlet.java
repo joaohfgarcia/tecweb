@@ -35,7 +35,7 @@ public class LoginServlet extends HttpServlet {
 		
 		if(user != null ) {
 			
-			RequestDispatcher rd = request.getRequestDispatcher("admin/dashboard/index.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("admin/dashboard/devs.jsp");
 			request.setAttribute("user",email);
 			rd.forward(request, response);
 			
@@ -43,7 +43,7 @@ public class LoginServlet extends HttpServlet {
 			 
 			
 			RequestDispatcher rd = request.getRequestDispatcher("admin/login.jsp");
-			request.setAttribute("error", "Erro, login ou senha inválidos");
+			request.setAttribute("error", "Login ou senha inválidos!");
 			rd.forward(request, response);
 		}
 		

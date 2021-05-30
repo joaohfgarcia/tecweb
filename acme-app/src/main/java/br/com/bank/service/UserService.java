@@ -17,7 +17,7 @@ public interface UserService {
 	
 	User editar(Long id);
 	
-	User getUser(String email,String password);
+	User buscar(String email,String password);
 	
 
 }

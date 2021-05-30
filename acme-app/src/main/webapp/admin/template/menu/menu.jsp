@@ -8,7 +8,7 @@
       <div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active  ">
-            <a class="nav-link" href="${pageContext.request.contextPath}/admin/dashboard/index.jsp">
+            <a class="nav-link" href="${pageContext.request.contextPath}/admin/dashboard/devs.jsp">
               <i class="material-icons">dashboard</i>
               <p>Home</p>
             </a>
@@ -26,7 +26,7 @@
             </a>
           </li>
           <li class="nav-item active-pro ">
-            <a class="nav-link" href="${pageContext.request.contextPath}/admin/dashboard/index.jsp">
+            <a class="nav-link" href="${pageContext.request.contextPath}/admin/dashboard/devs.jsp">
               <i class="material-icons">language</i>
               <p>About</p>
             </a>

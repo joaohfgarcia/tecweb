@@ -91,7 +91,7 @@ public class UserDaoImpl implements UserDao {
 	}
 
 	
-	public User getUser(String email,String password) {
+	public User buscar(String email,String password) {
 		EntityManager entityManager = JPAUtil.getEntityManagerFactory().createEntityManager();
 		entityManager.getTransaction().begin();
 		

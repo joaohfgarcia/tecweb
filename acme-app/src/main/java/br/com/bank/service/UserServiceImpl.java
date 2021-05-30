@@ -44,8 +44,8 @@ public class UserServiceImpl implements UserService {
 	}
 		
 	@Override
-	public User getUser(String email,String password)  {
-		return this.dao.getUser(email, password);
+	public User buscar(String email,String password)  {
+		return this.dao.buscar(email, password);
 		
 	}
 	

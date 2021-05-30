@@ -127,20 +127,25 @@
 					
 				</div>
 			</div>
+			<div align="center">
+				<c:if test="${error != null}">
+				  ${error}
+				</c:if>
+			</div>
 			<div class="card-body">
 				<form method="post" action="LoginServlet">
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
-						<input type="text" class="form-control" placeholder="username">
+						<input name="email" id="email" type="text" class="form-control" placeholder="username">
 						
 					</div>
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
-						<input type="password" class="form-control" placeholder="password">
+						<input name="password" id="password" type="password" class="form-control" placeholder="password">
 					</div>
 					<div class="row align-items-center remember">
 						<input type="checkbox">Lembre-me
