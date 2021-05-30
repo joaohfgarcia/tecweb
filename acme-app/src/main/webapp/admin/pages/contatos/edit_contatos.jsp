@@ -20,7 +20,7 @@
 	                    <div class="col-md-1">
 	                        <div class="form-group">
 	                          <label class="bmd-label-floating">Id</label>
-	                          <input type="text" name = "id" class="form-control" required="required" value="${contato.id}" disabled>              
+	                          <input type="text" name = "id" class="form-control" required="required" value="${contato.id}" readonly>              
 	                        </div>
 	                      </div>
 	                      <div class="col-md-6">
