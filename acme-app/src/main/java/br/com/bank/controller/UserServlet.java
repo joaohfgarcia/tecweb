@@ -37,7 +37,7 @@ public class UserServlet extends HttpServlet  {
 			String id = request.getParameter("id");
 			this.service.remover(Long.parseLong(id));
 			RequestDispatcher rv = request.getRequestDispatcher("/admin/pages/users/list_users.jsp");
-			request.setAttribute("removido", "Usu·rio removido com sucesso!");
+			request.setAttribute("removido", "Usu√°rio removido com sucesso!");
 			request.setAttribute("users", this.service.list());
 			rv.forward(request, response);
 			break;
@@ -79,20 +79,20 @@ public class UserServlet extends HttpServlet  {
 			this.service.salvar(user);
 			
 			RequestDispatcher rd = request.getRequestDispatcher("/admin/pages/users/list_users.jsp");
-			request.setAttribute("sucesso", "Usu·rio salvo com sucesso!");
+			request.setAttribute("sucesso", "Usu√°rio salvo com sucesso!");
 			request.setAttribute("users", this.service.list());
 			rd.forward(request, response);
 			break;
 		
 		case "atualizar":
 			
-			//this.user = this.service.editar(Long.parseLong(request.getParameter("id")));
+			this.user = this.service.editar(Long.parseLong(request.getParameter("id")));
 			this.user.setEmail(request.getParameter("email"));
 			this.user.setPassword(request.getParameter("password"));
 			this.service.atualizar(user);
 			
 			RequestDispatcher rd2 = request.getRequestDispatcher("/admin/pages/users/list_users.jsp");
-			request.setAttribute("sucesso", "Usu·rio editado com sucesso!");
+			request.setAttribute("sucesso", "Usu√°rio editado com sucesso!");
 			request.setAttribute("users", this.service.list());
 			rd2.forward(request, response);
 			break;
