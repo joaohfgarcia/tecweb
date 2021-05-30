@@ -85,7 +85,7 @@ public class ContatosServlet extends HttpServlet {
 		
 		case "atualizar":
 			
-			this.contato = this.service.editar(Long.parseLong(request.getParameter("id")));
+			//this.contato = this.service.editar(Long.parseLong(request.getParameter("id")));
 			this.contato.setNome(request.getParameter("nome"));
 			this.contato.setEmail(request.getParameter("email"));
 			

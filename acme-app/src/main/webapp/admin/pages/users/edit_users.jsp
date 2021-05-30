@@ -26,13 +26,13 @@
 	                      <div class="col-md-6">
 	                        <div class="form-group">
 	                          <label class="bmd-label-floating">Email</label>
-	                          <input type="email" name = "nome" class="form-control" maxlength="50" required="required" value="${user.email}">             
+	                          <input type="email" name = "email" class="form-control" maxlength="50" required="required" value="${user.email}">             
 	                        </div>
 	                      </div>
 	                      <div class="col-md-5">
 	                        <div class="form-group">
 	                          <label class="bmd-label-floating">Senha</label>
-	                          <input type="password" name="email" class="form-control" maxlength="50" required="required" value="${user.password}">
+	                          <input type="password" name="password" class="form-control" maxlength="50" required="required" value="${user.password}">
 	                        </div>
 	                      </div>
                     </div>
